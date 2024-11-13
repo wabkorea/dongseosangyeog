@@ -11,7 +11,9 @@
     <header class="main-header">
         <div class="header-inner">
             <h1 class="logo">
-                <img src="img/logo.png" alt="동서상역">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="동서상역">
+                </a>
             </h1>
             <button class="menu-toggle">
                 <span class="bar"></span>
@@ -20,21 +22,31 @@
             </button>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html#products">About Us</a></li>
                     <li><a href="index.html#business">Business Area</a></li>
                     <li><a href="index.html#company">Application</a></li>
                     <li><a href="index.html#footer">Contact Us</a></li>
-                    <li><a href="greeting.html">CEO Message</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#insa">CEO Message</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="greeting-section">
+    <!-- 헤더 다음에 추가 -->
+    <section id="about"class="about-banner">
+        <div class="banner-content">
+            <h2 class="banner-title">About Us</h2>
+            <p class="banner-text">사람 중심, 자연 중심, 기술 중심의 가치를 지닌<span class="mobile-br"></span> 동서상역입니다.</p>
+        </div>
+    </section>
+
+    <section id="insa" class="greeting-section">
         <div class="container">
             <div class="greeting-content">
                 <div class="greeting-header">
-                    <span class="greeting-subtitle">Premium Partner in the world</span>
+                    <span class="greeting-subtitle">
+                        <strong>Premium Partner <span class="mobile-br"></span>in the world</strong>
+                    </span>
                     <h2 class="greeting-title">인사말</h2>
                 </div>
                 
@@ -50,9 +62,10 @@
                         </p>
                         
                         <div class="greeting-body">
-                            <p>동서상역은 축적된 플랜트 엔지니어링 밎 장치제작 역량과
-                            <br>글로벌 기업 기술 협업을 통해 새롭게 도약하고,
-                            <br>미래 혁신 기업으로써 성장을 가속하고 있습니다.</p>
+                            <p>동서상역은 축적된 플랜트 엔지니어링 밎 
+                            <br>장치제작 역량과 글로벌 기업 기술 협업을 통해
+                            <br>새롭게 도약하고, 미래 혁신 기업으로써
+                            <br>성장을 가속하고 있습니다.</p>
                             <br>
                             <p>동서상역은 생명공학, 의학, 재료공학, 에너지 및 
                             <br>환경 보호와 같이 나노미터로 조작되는 초미세 기술인
@@ -112,7 +125,11 @@
 
 <footer id="footer" class="main-footer">
     <div class="footer-content">
-        <h2 class="footer-logo">동서상역</h2>
+        <h2 class="footer-logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="동서상역">
+            </a>
+        </h2>
         <div class="footer-info">
             <div class="info-row">
                 <span>대표자 : 김환수 </span>
@@ -124,7 +141,6 @@
                 </div>
             </div>
         </div>
-        <a href="greeting.html" class="footer-button">인사말</a>
     </div>
 </footer>
 
