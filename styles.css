@@ -295,7 +295,7 @@ body {
 .intro-section,
 .solution-section {
     position: relative;
-    background-image: url('../img/background.jpeg');
+    background-image: url('img/background.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* 패럴랙스 효과 */
@@ -779,7 +779,7 @@ body {
 
 .solution-section {
     position: relative;
-    background-image: url('../img/background.jpeg');
+    background-image: url('img/background.jpeg');
     background-size: cover;
     background-position: center;
     padding: 80px 0;
