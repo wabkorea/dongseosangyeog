@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // 해당 섹션의 모든 숫자 요소 찾기
-                const numbers = document.querySelectorAll('.big-number');
+                const numbers = entry.target.querySelectorAll('.number');
                 numbers.forEach(number => {
                     countUp(number);
                 });
@@ -96,9 +96,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 숫자 섹션 관찰 시작
-    const numberSection = document.querySelector('.achievement-section');
-    if (numberSection) {
-        observer.observe(numberSection);
+    const statsSection = document.querySelector('.wab-stats');
+    if (statsSection) {
+        observer.observe(statsSection);
     }
 
     // 햄버거 메뉴 토글
