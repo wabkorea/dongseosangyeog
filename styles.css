@@ -75,6 +75,7 @@ body {
     text-decoration: none;
     font-size: 24px;
     transition: color 0.3s ease;
+    font-weight: 700;
 }
 
 .main-nav a:hover {
@@ -731,10 +732,10 @@ body {
 }
 
 .movie-header h2 {
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 20px;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 .movie-header p {
