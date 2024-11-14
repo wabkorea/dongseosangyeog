@@ -39,14 +39,14 @@ body {
     width: 100%;
     background-color: var(--light-gray);
     z-index: 1000;
-    height: 90px;
+    height: 135px;
     padding: 0;
 }
 
 .header-inner {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -59,7 +59,7 @@ body {
 }
 
 .logo img {
-    height: 60px; /* 로고 이미지 높이 조정 (필요에 따라 수정) */
+    height: 90px;
     width: auto;
     display: block;
 }
@@ -67,13 +67,13 @@ body {
 .main-nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
 }
 
 .main-nav a {
     color: var(--text-dark);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     transition: color 0.3s ease;
 }
 
@@ -144,7 +144,7 @@ body {
 /* 기존 CSS 유지하고 추가 */
 
 .main-banner {
-    padding-top: 60px; /* 헤더 높이만큼 */
+    padding-top: 135px; /* 헤더 높이만큼 */
     height: 100vh;
     position: relative;
 }
@@ -332,13 +332,13 @@ body {
 }
 
 .intro-header h2 {
-    font-size: 36px;
+    font-size: 43px;
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .intro-header p {
-    font-size: 24px;
+    font-size: 29px;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.4;
 }
@@ -346,23 +346,30 @@ body {
 .category-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 50px;
+    gap: 40px;
+    margin-top: 80px;
+    width: 100%;
 }
 
 .category-item {
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .category-image {
     position: relative;
     width: 100%;
-    height: 200px;
+    padding-bottom: 75%;
+    height: 0;
     overflow: hidden;
+    margin-bottom: 15px;
 }
 
 .category-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -385,10 +392,10 @@ body {
 
 .category-item h3 {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 30px;
+    left: 30px;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 28px;
     z-index: 2;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -403,11 +410,26 @@ body {
 @media (max-width: 768px) {
     .category-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 30px;
+        margin-top: 40px;
     }
     
     .category-image {
-        height: 180px;
+        padding-bottom: 65%;
+    }
+
+    .intro-header h2 {
+        font-size: 34px;
+    }
+
+    .intro-header p {
+        font-size: 22px;
+    }
+
+    .category-item h3 {
+        font-size: 24px;
+        bottom: 20px;
+        left: 20px;
     }
 }
 
@@ -885,82 +907,112 @@ body {
 }
 
 .footer-content {
+    position: relative;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 40px;
-    position: relative;
+    padding: 40px 20px;
 }
 
 .footer-logo {
-    color: var(--text-dark);
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    height: 90px;
+    width: auto;
+    display: block;
 }
 
 .footer-info {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 19px;
+    color: #666;
+    line-height: 1.8;
 }
 
-.info-row {
-    margin-bottom: 10px;
-}
-
-.info-row span {
+.info-text {
     display: inline-block;
-    position: relative;
-    margin-right: 15px;
-    padding-right: 15px;
 }
 
-.info-row span:not(:last-child)::after {
-    content: "";
+.info-divider {
+    display: inline-block;
+    margin: 0 12px;
+    color: #999;
+}
+
+.copyright {
+    margin-top: 20px;
+    color: #888;
+    font-size: 17px;
+}
+
+.footer-blog-btn {
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 12px;
-    background-color: #666;
+    right: 20px;
+    bottom: 40px;
 }
 
+.footer-blog-btn a {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid #FF6B00;
+    border-radius: 30px;
+    color: #FF6B00;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.footer-blog-btn a:hover {
+    background-color: #FF6B00;
+    color: white;
+}
+
+/* 모바일 반응형 */
 @media (max-width: 768px) {
-    .info-row span {
-        display: block;
-        margin-bottom: 5px;
-        padding-right: 0;
-    }
-    
-    .info-row span::after {
-        display: none;
-    }
-}
-
-.footer-button {
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    padding: 10px 20px;
-}
-
-@media (max-width: 768px) {
-    .footer-button {
-        position: static;
-        display: block;
-        margin: 20px auto 0;
-        text-align: center;
-        transform: none;
+    .footer-content {
+        padding: 30px 20px;
     }
 
     .footer-info {
-        font-size: 14px;
+        font-size: 16px;
+        text-align: left; /* 좌측 정렬 */
+        padding-left: 15px; /* 좌측 여백 추가 */
     }
-
-    .info-row span {
-        font-size: 14px;
+    
+    .info-text {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: left; /* 좌측 정렬 */
+    }
+    
+    .info-divider {
+        display: none;
+    }
+    
+    .footer-info br {
+        display: none;
+    }
+    
+    .copyright {
+        font-size: 15px;
+        margin-top: 25px;
+        text-align: left; /* 좌측 정렬 */
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+    }
+    
+    .footer-blog-btn {
+        position: static;
+        margin-top: 30px;
+        text-align: right; /* BLOG 버튼은 우측 정렬 */
+        padding-right: 15px; /* 우측 여백 추가 */
+    }
+    
+    .footer-blog-btn a {
+        font-size: 16px;
+        padding: 12px 30px;
     }
 }
 
@@ -1368,7 +1420,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* 마스크 투명도 조 */
+    background: rgba(0, 0, 0, 0.5); /* 마크 투명도 조 */
     z-index: 1;
 }
 
@@ -1386,7 +1438,7 @@ html {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* 모바일 반응형 스일만 추가 */
+/* 모바일 반응형 스일 추가 */
 @media (max-width: 768px) {
     .greeting-body p {
         /* 모바일에서만 자동 줄바꿈 적용 */
@@ -1468,7 +1520,8 @@ html {
     text-align: center;
     margin-bottom: 60px;
     color: var(--primary-color);
-    font-size: 32px;
+    font-size: 48px;
+    font-weight: 700;
 }
 
 .wab-intro {
@@ -1519,11 +1572,26 @@ html {
     .wab-image .image-container {
         flex-direction: column;
         gap: 40px;
+        align-items: center; /* 중앙 정렬 추가 */
     }
     
     .circle-image {
-        width: 250px;
-        height: 250px;
+        flex: 0 0 250px;
+        width: 250px;  /* 너비 고정 */
+        height: 250px; /* 높이도 동일하게 설정하여 정원 유지 */
+        min-width: 250px; /* 최소 너비 설정 */
+        min-height: 250px; /* 최소 높이 설정 */
+    }
+}
+
+/* 더 작은 모바일 화면 대응 */
+@media (max-width: 480px) {
+    .circle-image {
+        flex: 0 0 200px;
+        width: 200px;
+        height: 200px;
+        min-width: 200px;
+        min-height: 200px;
     }
 }
 
@@ -1615,20 +1683,36 @@ html {
 }
 
 .stats-header {
+    text-align: center;
     margin-bottom: 50px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.stats-year {
+    position: absolute;
+    left: 20px;
+    top: -30px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
 }
 
 .stats-header h3 {
-    color: var(--primary-color);
+    color: #2196F3;
     font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-weight: 400;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
 }
 
 .stats-header h4 {
-    color: #666;
-    font-size: 24px;
-    font-weight: 500;
+    color: #003366;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin-top: -5px;
 }
 
 .stats-grid {
@@ -1664,20 +1748,24 @@ html {
         gap: 40px;
     }
 
+    .stats-header {
+        padding: 0 15px;
+    }
+
+    .stats-year {
+        left: 15px;
+        font-size: 14px;
+        top: -25px;
+    }
+
     .stats-header h3 {
         font-size: 28px;
+        margin-bottom: 2px;
     }
 
     .stats-header h4 {
-        font-size: 20px;
-    }
-
-    .stat-item .number {
-        font-size: 36px;
-    }
-
-    .stat-item .label {
-        font-size: 16px;
+        font-size: 32px;
+        margin-top: -3px;
     }
 }
 
@@ -1686,7 +1774,8 @@ html {
     text-align: center;
     margin-bottom: 60px;
     color: var(--primary-color);
-    font-size: 32px;
+    font-size: 48px;
+    font-weight: 700;
 }
 
 .text-content h2 {
@@ -1698,11 +1787,11 @@ html {
 /* 모바일 화면에서 텍스트 크기 조정 */
 @media (max-width: 768px) {
     .section-title {
-        font-size: 24px;  /* WAB 타이틀 크기 축소 */
+        font-size: 36px;
     }
 
     .text-content h2 {
-        font-size: 28px;  /* HOMO MIXER 관련 타이틀 크기 축소 */
+        font-size: 28px;
     }
 }
 
@@ -1747,11 +1836,26 @@ html {
     .wab-image .image-container {
         flex-direction: column;
         gap: 40px;
+        align-items: center; /* 중앙 정렬 추가 */
     }
     
     .circle-image {
-        width: 250px;
-        height: 250px;
+        flex: 0 0 250px;
+        width: 250px;  /* 너비 고정 */
+        height: 250px; /* 높이도 동일하게 설정하여 정원 유지 */
+        min-width: 250px; /* 최소 너비 설정 */
+        min-height: 250px; /* 최소 높이 설정 */
+    }
+}
+
+/* 더 작은 모바일 화면 대응 */
+@media (max-width: 480px) {
+    .circle-image {
+        flex: 0 0 200px;
+        width: 200px;
+        height: 200px;
+        min-width: 200px;
+        min-height: 200px;
     }
 }
 
@@ -1813,5 +1917,145 @@ html {
 
     .banner-text {
         font-size: 18px;
+    }
+}
+
+/* LEARN MORE 버튼 스타일 */
+.learn-more-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.learn-more-btn a {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 2px solid #FF6B00;
+    border-radius: 30px;
+    color: #FF6B00;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.learn-more-btn a:hover {
+    background-color: #FF6B00;
+    color: white;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .learn-more-btn a {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+}
+
+/* 헤더 기본 스타일 */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--light-gray);
+    z-index: 1000;
+    height: 135px;
+    padding: 0;
+}
+
+.header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 90px;
+    width: auto;
+    display: block;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .main-header {
+        height: 110px; /* 헤더 높이 증가 */
+    }
+
+    .header-inner {
+        padding: 0 20px;
+    }
+
+    .logo img {
+        height: 75px; /* 로고 크기 증가 (기존보다 더 크게) */
+        width: auto;
+    }
+
+    /* 햄버거 메뉴 위치 조정 */
+    .menu-toggle {
+        transform: scale(1.2); /* 햄버거 메뉴도 약간 크게 */
+    }
+}
+
+/* 더 작은 모바일 화면 대응 */
+@media (max-width: 480px) {
+    .main-header {
+        height: 100px;
+    }
+
+    .logo img {
+        height: 65px; /* 매우 작은 화면에서는 약간 줄임 */
+    }
+}
+
+.greeting-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.greeting-title {
+    font-size: 42px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.greeting-signature {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.thanks {
+    color: #000000;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.signature-line {
+    border-top: 1px solid #000000;
+    margin: 15px 0;
+}
+
+.ceo-name {
+    color: #000000;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .greeting-title {
+        font-size: 32px;
+    }
+    
+    .thanks, .ceo-name {
+        font-size: 17px;
     }
 }
